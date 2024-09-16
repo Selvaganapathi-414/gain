@@ -3,11 +3,20 @@ import java.io.*;
 import java.util.Scanner;
 class Jdbc{
     public static void main(String[] args) throws Exception {
+        System.out.print("Enter the UserName :");
+        String uname=sc.next();
+        System.out.print("Enter the Password :");
+        String pwd=sc.next();
+        if(uname.equals("selva@123") && pwd.equals("1234567890")){
         insert();
         insertsts();
         delete();
         update();
         resource();
+        }
+        else{
+            System.out.print("You are not allowed to acess the database");
+        }
     }
     public static void resource() throws Exception{
         Connection connection = null;
